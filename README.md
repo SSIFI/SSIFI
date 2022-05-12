@@ -2,28 +2,6 @@
 
 # SSIFI
 
-- SSIFI
-
-  - [Intro](intro)
-
-  - [Service](service)
-
-  - [install](Install Dependencies)
-
-  - [How to use](How to use)
-- [STT](STT(Sound To Text) - Speech Recognition(Korean))
-  - [Transcription](Transcription)
-- [NLP](NLP(Natural Language Processing))
-- [TTS](TTS(Text To Sound) - FastSpeech 2 Korean)
-  - [Preprocessing](Preprocessing)
-  - [Training](Training)
-  - [Pre-trained Model](Pre-trained Model)
-  - [Synthesis](Synthesis)
-  - [Tensorboard](Tensorboard)
-- [References](References)
-
-
-
 ## Intro
 
 >  이 프로젝트의 목표는 대화형 AI 대한 접근성을 높이는 것 입니다. 이 오픈소스를 통해서 사용자는 STT, NLP, TTS 기술을 보다 쉽게 사용하실 수 있습니다.

@@ -58,9 +58,9 @@ python ssifi.py
 
 > 본 프로젝트에서는 STT로 [Speech Recognition](https://github.com/Uberi/speech_recognition) 라이브러리를 사용했습니다. 해당 라이브러리는 온라인 및 오프라인에서 여러 엔진 및 API를 지원하여 음성 인식을 수행하기 위한 라이브러리 입니다. 라이브러리에는 다양한 기능이 있지만, 현재 프로젝트에서는 한국어 음성이 녹음된 파일을 이용하기 때문에 한국어 음성을 텍스트화 하는 기능만 사용합니다.
 
-- Speech recognition engine/API 
+- Speech recognition가 지원하는 engine/API: 
   - [CMU Sphinx](http://cmusphinx.sourceforge.net/wiki/) (works offline)
-  - Google Speech Recognition(프로젝에서 사용한 모델.)
+  - Google Speech Recognition(프로젝트에서 사용한 모델)
   - [Google Cloud Speech API](https://cloud.google.com/speech/)
   - [Wit.ai](https://wit.ai/)
   - [Microsoft Azure Speech](https://azure.microsoft.com/en-us/services/cognitive-services/speech/)
@@ -87,15 +87,19 @@ prompt = STT.speech_recognition(audio_path)
 
 
 
+
+
 # NLP(Natural Language Processing)
 
 
 
-## pre-trained model
+## Usage
 
 
 
 ## Fine-Tuning
+
+
 
 
 
@@ -149,7 +153,7 @@ data 전처리를 위해 위의 커맨드를 입력해 주세요. 전처리 된 
 
 
 ## Training
-모델 학습 전에, kss dataset에 대해 사전학습된 VocGAN(neural vocoder)을 [다운로드](https://drive.google.com/file/d/1GxaLlTrEhq0aXFvd_X1f4b-ev7-FH8RB/view?usp=sharing) 하여 ``vocoder/pretrained_models/`` 경로에 위치시킵니다.
+모델 학습 전에, kss dataset에 대해 사전학습된 [VocGAN](https://github.com/rishikksh20/VocGAN)(neural vocoder)을 [다운로드](https://drive.google.com/file/d/1GxaLlTrEhq0aXFvd_X1f4b-ev7-FH8RB/view?usp=sharing) 하여 ``vocoder/pretrained_models/`` 경로에 위치시킵니다. 만약, VocGAN에 대한 학습이 필요하시다면 해당 링크를 참고하셔서 진행하시면 됩니다.
 아래의 커맨드를 입력하여 모델 학습을 수행합니다.
 
 ```
@@ -181,6 +185,8 @@ pretrained model(checkpoint)을 [다운로드](https://drive.google.com/file/d/1
 - step: 트레이닝 된 모델의 step(default=350000)
 
 상세코드는 ``TTS/synthesize.py`` 를 참고하시면 됩니다.
+
+
 
 
 ## Tensorboard

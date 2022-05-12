@@ -54,7 +54,7 @@ python ssifi.py
 
 
 
-# STT(Sound To Text) - Speech Recognition(Korean)
+# STT(Speech To Text) - Speech Recognition(Korean)
 
 > 본 프로젝트에서는 STT로 [Speech Recognition](https://github.com/Uberi/speech_recognition) 라이브러리를 사용했습니다. 해당 라이브러리는 온라인 및 오프라인에서 여러 엔진 및 API를 지원하여 음성 인식을 수행하기 위한 라이브러리 입니다. 라이브러리에는 다양한 기능이 있지만, 현재 프로젝트에서는 한국어 음성이 녹음된 파일을 이용하기 때문에 한국어 음성을 텍스트화 하는 기능만 사용합니다.
 
@@ -103,7 +103,7 @@ prompt = STT.speech_recognition(audio_path)
 
 
 
-# TTS(Text To Sound) - FastSpeech 2 Korean
+# TTS(Text To Speech) - FastSpeech 2 Korean
 
 > 이 프로젝트의 TTS는 Microsoft의 [**FastSpeech 2(Y. Ren et. al., 2020)**](https://arxiv.org/abs/2006.04558)를 [**Korean Single Speech dataset (이하 KSS dataset)**](https://www.kaggle.com/bryanpark/korean-single-speaker-speech-dataset)에서 동작하도록 구현한 것입니다. 
 >

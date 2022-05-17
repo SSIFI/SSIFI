@@ -91,15 +91,37 @@ prompt = STT.speech_recognition(audio_path)
 
 # NLP(Natural Language Processing)
 
+> 본 프로젝트에서는 3가지 NLP 모델을 이용해 자연어 이해 및 확장을 구현합니다.
+>
+> 사용하는 NLP 모델과 그 활용은 다음과 같습니다.
+>
+> 1. SKT-KoGPT : Chatbot, Wellnessbot, Novelbot
+> 2. KAKAO-kogpt : Chatbot
+> 3. GLIDE-text2im : Painterbot
+
 
 
 ## Usage
 
 
 
+### Save Model
+
+- SSIFI 에서 제공하는 기본모델 : `BASICBOT, NOVELBOT, WELLNESSBOT, PAINTERBOT, KAKAO-KOGPT `
+
+- 다음 명령어를 통해 제공 모델을 다운받을 수 있습니다. (모델 저장 위치 : `NLP/models`)
+
+  ```
+  python NLP/save_models.py
+  ```
+
+
+
 ## Fine-Tuning
 
-
+> NLP 모델의 Fine-tuning 은 Colab 활용을 위해 jupyter-notebook 으로 작성되었습니다.
+>
+> 'ssifi/NLP/notebook' 폴더의 파일을 참고하세요.
 
 
 
@@ -202,9 +224,18 @@ tensorboard --logdir log/hp.dataset/
 
 ## References
 
+- STT
+  - [GitHub - speech_recognition](https://github.com/Uberi/speech_recognition)
 - NLP
-  - [GitHub - SKT-AI/KoGPT2: Korean GPT-2 pretrained cased (KoGPT2)](https://github.com/SKT-AI/KoGPT2)
-
+  - KoGPT2
+    - [GitHub - SKT-AI/KoGPT2: Korean GPT-2 pretrained cased (KoGPT2)](https://github.com/SKT-AI/KoGPT2)
+    - [GitHub - ttop32/KoGPT2novel](https://github.com/ttop32/KoGPT2novel)
+    - [GitHub - nawnoes/WellnessConversation-LanguageModel](https://github.com/nawnoes/WellnessConversation-LanguageModel)
+  - KAKAO - kogpt
+    - [GitHub - kakaobrain/kogpt](https://github.com/kakaobrain/kogpt)
+  - GLIDE - text2im
+    - [GitHub - openai/glide-text2im](https://github.com/openai/glide-text2im)
+    - [Kaggle - GLIDE multiple-image tuning](https://www.kaggle.com/code/neverix/glide-multiple-image-tuning/notebook)
 - TTS
   - [FastSpeech 2: Fast and High-Quality End-to-End Text to Speech](https://arxiv.org/abs/2006.04558), Y. Ren, *et al*.
   - [FastSpeech: Fast, Robust and Controllable Text to Speech](https://arxiv.org/abs/1905.09263), Y. Ren, *et al*.

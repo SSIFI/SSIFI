@@ -103,6 +103,9 @@ def synthesize(file_name, results_path, model, vocoder, text):
         Audio.tools.inv_mel_spec(mel_postnet_torch[0], os.path.join(
             hp.results_path, '{}.wav'.format(file_name)))
 
+    utils.plot_data([(mel_postnet_torch[0].detach().cpu().numpy(), f0_output, energy_output)], [
+                    'Synthesized Spectrogram'], filename=os.path.join(results_path, '{}.png'.format(file_name)))
+
 
 def make_sound(file_name, sentence, results_path, step=350000):
 

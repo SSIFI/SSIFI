@@ -1,4 +1,4 @@
-<img src="assets/image-20220517111415442.png" alt="image-20220517111415442" style="zoom:10%;" />
+<img src="assets/image-20220517111415442.png" alt="image-20220517111415442" width="20%" height="20%" />
 
 # SSIFI
 
@@ -13,16 +13,16 @@
   - [Service Example](#service)
   - [Installation](#install-dependencies)
   - [How To Use](#how-to-use)
-- [STT](<#stt(speech-to-text)---speech-recognition(Korean)>)
+- [STT](<#sttspeech-to-text-speech-recognitionkorean>)
   - [Transcription](#transcription)
-- [NLP](<#nlp(natural-language-processing)>)
+- [NLP](<#nlpnatural-language-processing>)
   - [Save Model](#save-model)
-  - [Fine-Tuning](#finet---tuning)
+  - [Fine-Tuning](#fine-tuning)
   - [Usage](#usage)
-- [STT](<#tts(text-to-speech)---fastspeech-2-korean>)
+- [TTS](<#ttstext-to-speech-fastspeech-2-korean>)
   - [Preprocessing](#preprocessing)
   - [Training](#training)
-  - [Pretrained Model](#pretrained-model)
+  - [Pre-trained Model](#pre-trained-model)
   - [Synthesis](#synthesis)
   - [Tensorboard](#tensorboard)
 - [References](#references)

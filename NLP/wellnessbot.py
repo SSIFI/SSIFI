@@ -16,7 +16,7 @@ tokenizer_path = base_path + '/models/wellnessbot/tokenizer'
 model_path = base_path + '/models/wellnessbot/model'
 checkpoint_path = base_path + '/models/wellnessbot/checkpoint/wellnessbot_last.pth'
 
-# Wellnessbot
+# WELLNESSBOT
 def wellnessbot(prompt, max_length = 50):
 	# Default max length : 50
 
@@ -31,7 +31,7 @@ def wellnessbot(prompt, max_length = 50):
 		generated = model.generate(input_ids=input_ids)
 		generated = tokenizer.decode(generated[0].tolist()[len(tokens)+1:],skip_special_tokens=True)
 
-	# "." 에서 문장 종료
+	# Split sentences with "." 
 	if "." in generated:
 		endpoint = generated.index(".")
 		generated = generated[:endpoint+1]

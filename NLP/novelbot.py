@@ -10,6 +10,7 @@ base_path = '/'.join(base_path[:-1])
 
 tokenizer_path = base_path + '/models/novelbot/tokenizer'
 model_path = base_path + '/models/novelbot/model'
+
 # NOVEL BOT
 def novelbot(prompt, max_length: int = 256):
   tokenizer = AutoTokenizer.from_pretrained(tokenizer_path)

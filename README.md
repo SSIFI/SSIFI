@@ -25,6 +25,7 @@
   - [Pre-trained Model](#pre-trained-model)
   - [Synthesis](#synthesis)
   - [Tensorboard](#tensorboard)
+- [License](#license)
 - [References](#references)
 
 
@@ -137,11 +138,18 @@ prompt = STT.speech_recognition(audio_path)
 
 - SSIFI 에서 제공하는 기본모델 : `BASICBOT, NOVELBOT, WELLNESSBOT, PAINTERBOT, KAKAO-KOGPT `
 
-  - BASICBOT - Fine-Tuning 하지 않은 KoGPT2(SKT-KoGPT) Pretrained Model
-  - NOVELBOT - 소설 데이터를 바탕으로 Fine-Tuning이 진행된 KoGPT2(SKT-KoGPT) Model
-  - WELLNESSBOT - 심리상담 데이터를 바탕으로 Fine-Tuning이 진행된 KoGPT2(SKT-KoGPT) Model
-  - PAINTBOT - Fine-Tuning 하지 않은 GLIDE-text2im Pretrained Model(Input 값으로 한국어 텍스트 사용불가)
-  - KAKAO-KOGPT - KAKAO에서 제작되었으며 Fine-Tuning 하지 않은 Pretrained Model
+  - BASICBOT 
+    - Fine-Tuning 하지 않은 KoGPT2(SKT-KoGPT) Pretrained Model
+  - NOVELBOT
+    - 소설 데이터를 바탕으로 Fine-Tuning이 진행된 KoGPT2(SKT-KoGPT) Model
+  - WELLNESSBOT
+    - 심리상담 데이터를 바탕으로 Fine-Tuning이 진행된 KoGPT2(SKT-KoGPT) Model
+  - PAINTBOT
+    - Fine-Tuning 하지 않은 GLIDE-text2im Pretrained Model(Input 값으로 한국어 텍스트 사용불가)
+  - KAKAO-KOGPT6B-ryan1.5b-float16 
+    - KAKAO에서 제작되었으며 Fine-Tuning 하지 않은 Pretrained Model
+    - half-precision(반정밀도)는 Volta, Turing 또는 Ampere 기반의 NVIDIA GPU가 필요합니다.
+    - 최소 16GB 이상 GPU 메모리가 필요합니다. 
 
 - 다음 명령어를 통해 제공 모델을 다운받을 수 있습니다. (모델 저장 위치 : `NLP/models`)
 
@@ -203,11 +211,11 @@ dataset을 다운로드 하신 후, 압축을 해제하시고 `hparams.py`에 �
 
 **(2) phoneme-utterance sequence간 alignment 정보 download**
 
-- KSS ver.1.4. ([download](https://drive.google.com/file/d/1LgZPfWAvPcdOpGBSncvMgv54rGIf1y-H/view?usp=sharing))
+- KSS ([download](https://drive.google.com/file/d/1LgZPfWAvPcdOpGBSncvMgv54rGIf1y-H/view?usp=sharing))
 
 FastSpeech2를 학습하기 위해서는 [Montreal Forced Aligner](https://montreal-forced-aligner.readthedocs.io/en/latest/)(MFA)에서 추출된 utterances와 phoneme sequence간의 alignment가 필요합니다. kss dataset에 대한 alignment 정보(TextGrid)는 위의 링크에서 다운로드 가능합니다. 다운 받은 `TextGrid.zip`파일을 `프로젝트 폴더 (TTS)`에 두시면 됩니다.
 
-**\*KSS dataset에 적용된 License로 인해 kss dataset에서 추출된 TextGrid를 상업적으로 사용하는 것을 금합니다.**
+**\*KSS dataset에 적용된 [License](https://creativecommons.org/licenses/by-nc-sa/4.0/)로 인해 kss dataset에서 추출된 TextGrid를 상업적으로 사용하는 것을 금합니다.**
 
 **(3) 데이터 전처리**
 
@@ -277,6 +285,25 @@ tensorboard --logdir log/hp.dataset/
 
 - hp.dataset: hparams.py에 등록된 dataset 변수에 등록된 경로
   tensorboard log들은 `log/hp.dataset/` directory에 저장됩니다. 그러므로 위의 커멘드를 이용하여 tensorboard를 실행해 학습 상황을 모니터링 하실 수 있습니다.
+
+
+
+
+
+# License
+
+- STT
+  - Speech Recognition 라이브러리는 [BSD](./STT/LICENSE) 라이선스 하에 공개되어 있습니다.
+
+- NLP
+  - SKT-KoGPT는 [CC-BY-NC-ND 4.0 ](./NLP/LICENSE/) 라이선스 하에 공개되어 있습니다.
+  - KakaoBrain KoGPT의 소스코드(source code)는 [Apache 2.0](./NLP/LICENSE.apache-2.0) 라이선스 하에 공개되어 있습니다.
+  - KakaoBrain KoGPT의 사전학습된 가중치(pretrained weights)는 [CC-BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) 라이선스 하에 공개되어 있습니다.
+  - GLIDE-text2im는 [MIT](./NLP/LICENSE.MIT) 라이선스 하에 공개되어 있습니다.
+- TTS
+  - 활용한 [오픈소스](https://github.com/HGU-DLLAB/Korean-FastSpeech2-Pytorch)에서 사용된 Fastspeech2 모델은 [MIT](./TTS/LICENSE) 라이선스 하에 공개되어 있습니다.
+
+모델 및 코드, 사전학습된 가중치를 사용할 경우 라이선스 내용을 준수해 주세요.
 
 
 

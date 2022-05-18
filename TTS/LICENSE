@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2022 SSIFI
+Copyright (c) 2020 Chung-Ming Chien
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,12 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-=======================================================================
-
-SKT-KoGPT는 [CC-BY-NC-ND 4.0 라이선스](./NLP/LICENSE/)
-KakaoBrain KoGPT의 소스코드(source code)는 [Apache 2.0](./NLP/LICENSE.apache-2.0) 라이선스 하에 공개되어 있습니다.
-KakaoBrain KoGPT의 사전학습된 가중치(pretrained weights)는 [CC-BY-NC-ND 4.0 라이선스](https://creativecommons.org/licenses/by-nc-nd/4.0/) 라이선스 하에 공개되어 있습니다.
-GLIDE-text2im는 [MIT](./NLP/LICENSE.MIT)
-
-Fastspeech2 모델은 [MIT](./TTS/LICENSE) 라이선스 하에 공개되어 있습니다.

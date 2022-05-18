@@ -29,7 +29,7 @@ print(output)
 
 # TTS
 results_path = './'
-file_name = 'test2'
+file_name = 'test'
 sentence = input()
-step = 540000
+step = 350000
 synthesize.make_sound(file_name, sentence, results_path, step)

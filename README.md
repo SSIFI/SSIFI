@@ -1,4 +1,4 @@
-<img src="assets/image-20220517111415442.png" alt="image-20220517111415442" width="20%" height="20%" />
+<img src="assets/logo_transparent_background.png" alt="image-logo_transparent_background" width="40%" height="40%" />
 
 # SSIFI
 
@@ -64,6 +64,7 @@ pip install -r requirements.txt
 ```
 
 **[WARNING]**
+
 **1. Window에서는 g2pk의 dependency인 python-mecab-ko 설치문제가 발생하며, Window 버전을 설치 하더라도 g2pk 설치시 에러가 발생할 수 있기 때문에 linux 환경을 권장드립니다.**
 
 **2. Anaconda 가상환경을 사용하시는 것을 권장드립니다.**
@@ -74,9 +75,9 @@ pip install -r requirements.txt
 
 먼저 ssifi.py에서 STT, NLP, TTS를 사용하기 위한 변수값을 지정한 후 아래의 커맨드를 실행해 주세요.
 
-해당 커맨드는 STT - NLP - TTS 순으로 동작합니다.
-
 각 변수들에 해당하는 값은 담당파트의 사용방법을 참고해주세요.
+
+해당 커맨드는 STT - NLP - TTS 순으로 동작합니다.
 
 ```
 python ssifi.py
@@ -102,6 +103,7 @@ python ssifi.py
   - [Snowboy Hotword Detection](https://snowboy.kitt.ai/) (works offline)
   - [Tensorflow](https://www.tensorflow.org/)
   - [Vosk API](https://github.com/alphacep/vosk-api/) (works offline)
+
 
 ## Transcription
 
@@ -135,6 +137,12 @@ prompt = STT.speech_recognition(audio_path)
 
 - SSIFI 에서 제공하는 기본모델 : `BASICBOT, NOVELBOT, WELLNESSBOT, PAINTERBOT, KAKAO-KOGPT `
 
+  - BASICBOT - Fine-Tuning 하지 않은 KoGPT2(SKT-KoGPT) Pretrained Model
+  - NOVELBOT - 소설 데이터를 바탕으로 Fine-Tuning이 진행된 KoGPT2(SKT-KoGPT) Model
+  - WELLNESSBOT - 심리상담 데이터를 바탕으로 Fine-Tuning이 진행된 KoGPT2(SKT-KoGPT) Model
+  - PAINTBOT - Fine-Tuning 하지 않은 GLIDE-text2im Pretrained Model(Input 값으로 한국어 텍스트 사용불가)
+  - KAKAO-KOGPT - KAKAO에서 제작되었으며 Fine-Tuning 하지 않은 Pretrained Model
+
 - 다음 명령어를 통해 제공 모델을 다운받을 수 있습니다. (모델 저장 위치 : `NLP/models`)
 
   ```
@@ -161,7 +169,7 @@ print(output)
 
 - ssifi.py
   - prompt: NLP의 Input Text (STT 결과 값)
-  - length: 답변받을 Text 길이
+  - length: output Text의 최대 길이
   - ouput: NLP 결과값
 
 

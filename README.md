@@ -2,7 +2,7 @@
 
 # SSIFI
 
-<img src="https://img.shields.io/badge/License-MIT-brightgreen?style=plastic"> <img src="https://img.shields.io/badge/Python-3.7-brightgreen?style=plastic&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Anaconda-44A833?style=plastic&logo=Anaconda&logoColor=white"> <img src="https://img.shields.io/badge/Ubuntu-E95420?style=plastic&logo=Ubuntu&logoColor=white"> <img src="https://img.shields.io/badge/PyTorch-critical?style=plastic&logo=PyTorch&logoColor=white"> <img src="https://img.shields.io/badge/Jupyter-F37626?style=plastic&logo=Ubuntu&logoColor=white">
+<img src="https://img.shields.io/badge/License-MIT-brightgreen?style=plastic"> <img src="https://img.shields.io/badge/Python-3.7-brightgreen?style=plastic&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Anaconda-44A833?style=plastic&logo=Anaconda&logoColor=white"> <img src="https://img.shields.io/badge/Ubuntu-E95420?style=plastic&logo=Ubuntu&logoColor=white"> <img src="https://img.shields.io/badge/PyTorch-critical?style=plastic&logo=PyTorch&logoColor=white"> <img src="https://img.shields.io/badge/Jupyter-F37626?style=plastic&logo=Ubuntu&logoColor=white">  [<img src="https://img.shields.io/badge/Docs-brightgreen?style=plastic">](https://ssifi-ai.com:4001/ms)
 
 
 
@@ -24,6 +24,7 @@
   - [Training](#training)
   - [Pre-trained Model](#pre-trained-model)
   - [Synthesis](#synthesis)
+  - [Fine-Tunung](#fine-tuning)
   - [Tensorboard](#tensorboard)
 - [License](#license)
 - [References](#references)
@@ -292,7 +293,10 @@ pretrained model(checkpoint)을 [다운로드](https://drive.google.com/file/d/1
 
 ## Fine-Tuning
 
- 전처리 및 학습을 위한 데이터 구조는 kss 데이터 구조에 맞춰져 있습니다. 현재 프로젝트에서 Fine-tuning을 진행하기 위해서는 데이터 구조 및 경로에 대한 parameter 설정 후 training과 같은 방법으로 진행 하시면 됩니다. 
+ 전처리 및 학습을 위한 데이터 구조는 kss 데이터 구조에 맞춰져 있습니다. 현재 프로젝트에서 Fine-tuning을 진행하기 위해서는 데이터 구조 및 경로에 대한 parameter 설정 후 training과 같은 방법으로 진행 하시면 됩니다.
+
+
+
 
 
 

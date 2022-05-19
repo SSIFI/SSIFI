@@ -2,7 +2,7 @@
 
 # SSIFI
 
-<img src="https://img.shields.io/badge/License-MIT-brightgreen?style=plastic"> <img src="https://img.shields.io/badge/Python-3.7-brightgreen?style=plastic&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Anaconda-44A833?style=plastic&logo=Anaconda&logoColor=white"> <img src="https://img.shields.io/badge/Ubuntu-E95420?style=plastic&logo=Ubuntu&logoColor=white"> <img src="https://img.shields.io/badge/PyTorch-critical?style=plastic&logo=PyTorch&logoColor=white"> <img src="https://img.shields.io/badge/Jupyter-F37626?style=plastic&logo=Ubuntu&logoColor=white">  [<img src="https://img.shields.io/badge/Docs-brightgreen?style=plastic">](https://ssifi-ai.com:4001/ms)
+[<img src="https://img.shields.io/badge/License-MIT-brightgreen?style=plastic">]() [<img src="https://img.shields.io/badge/Python-3.7-brightgreen?style=plastic&logo=Python&logoColor=white">]() [<img src="https://img.shields.io/badge/Anaconda-44A833?style=plastic&logo=Anaconda&logoColor=white">]() [<img src="https://img.shields.io/badge/Ubuntu-E95420?style=plastic&logo=Ubuntu&logoColor=white">]() [<img src="https://img.shields.io/badge/PyTorch-critical?style=plastic&logo=PyTorch&logoColor=white">]() [<img src="https://img.shields.io/badge/Jupyter-F37626?style=plastic&logo=Ubuntu&logoColor=white">]()  [<img src="https://img.shields.io/badge/Docs-brightgreen?style=plastic">](https://ssifi-ai.com:4001/ms)
 
 
 

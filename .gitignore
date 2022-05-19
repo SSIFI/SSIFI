@@ -141,8 +141,6 @@ dmypy.json
 .pyre/
 .zip/
 
-# STT
-audio_sample/
 
 # NLP
 models/
@@ -156,5 +154,10 @@ pretrained_models/
 TextGrid/
 g2pK/
 dataset/
-preprocessed/
 models/
+alignment/
+energy/
+f0/
+mel/
+train.txt
+val.txt

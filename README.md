@@ -46,17 +46,24 @@
 
 ## Install Dependencies
 
-먼저 Python = 3.7, [PyTorch](https://pytorch.org/), [ffmpeg](https://ffmpeg.org/)와 [g2pk](https://github.com/Kyubyong/g2pK)를 설치합니다.
+먼저 Python = 3.7, [PyTorch](https://pytorch.org/), [ffmpeg](https://ffmpeg.org/)와 [g2pk](https://github.com/Kyubyong/g2pK) 순으로 설치를 진행합니다.
+
+해당 설치 과정은 TTS에서 사용되는 패키지의 의존성 문제 때문에 선행으로 진행하게 됩니다.
+
+아래에 설치 커맨드를 순서대로 진행하셔서 패키지를 설치하시면 됩니다.
 
 ```
 # ffmpeg install
-sudo apt-get install ffmpeg
+pip install ffmpeg
 
-# [WARNING] g2pk를 설치하시기 전에, g2pk github을 참조하셔서 g2pk의 dependency를 설치하시고 g2pk를 설치하시기 바랍니다.
-pip install g2pk
+# [WARNING] g2pk를 설치하시기 전에 g2pk github을 참조하셔서 g2pk의 dependency를 설치하시고 g2pk를 설치하시거나, 혹은 아래의 순서대로 패키지 설치를 진행하시기 바랍니다. 
+1. pip install wget
+2. pip install -v python-mecab-ko
+3. pip install jamo
+4. pip install konlpy
+5. pip install nltk
+6. pip install g2pk
 ```
-
-해당 설치 과정은 TTS에서 사용되는 패키지의 의존성 문제 때문에 선행으로 진행하게 됩니다.
 
 다음으로, 필요한 모듈을 pip를 이용하여 설치합니다.
 
@@ -74,17 +81,17 @@ pip install -r requirements.txt
 
 ## How to use
 
-먼저 ssifi.py에서 STT, NLP, TTS를 사용하기 위한 변수값을 지정한 후 아래의 커맨드를 실행해 주세요.
-
-각 변수들에 해당하는 값은 담당파트의 사용방법을 참고해주세요.
-
-해당 커맨드는 STT - NLP - TTS 순으로 동작합니다.
-
 ```
 python ssifi.py
 ```
 
+해당 커맨드는 STT - NLP - TTS 순으로 동작합니다.
 
+먼저 ssifi.py는 STT의 샘플음성 데이터를 기본으로 실행 및 결과값을 받을 수 있도록 되어 있습니다.
+
+NLP, TTS의 경우 모듈 및 경로가 기본값으로 설정이 되어있습니다.
+
+ STT, NLP, TTS를 사용하기 위한 변수값을 지정하고, 해당파트를 참고하여 사전학습된 모델이 경로에 위치해 있는지 확인이 진행된 후 커맨드를 실행해 주세요.
 
 
 
@@ -262,6 +269,8 @@ pretrained model(checkpoint)을 [다운로드](https://drive.google.com/file/d/1
 
 ## Synthesis
 
+사전에 학습이 진행된 것이 없으시다면 [Pre-trained Model](#pre-trained-model)과 [Training](#training) 을 참고하여 학습된 모델을 다운 받고 해당 경로에 위치 시킨 후 진행 하시길 바랍니다.
+
 학습된 파라미터를 기반으로 음성을 생성하기 위해서는 ssifi.py에서 make_sound함수를 통해 생성하실 수 있습니다.
 
 `make_sound(file_name, sentence, results_path, step=350000)`
@@ -274,6 +283,12 @@ pretrained model(checkpoint)을 [다운로드](https://drive.google.com/file/d/1
 - step: 학습이 진행된 모델의 step(default=350000)
 
 상세코드는 `TTS/synthesize.py` 를 참고하시면 됩니다.
+
+
+
+## Fine-Tuning
+
+ 전처리 및 학습을 위한 데이터 구조는 kss 데이터 구조에 맞춰져 있습니다. 현재 프로젝트에서 Fine-tuning을 진행하기 위해서는 데이터 구조 및 경로에 대한 parameter 설정 후 training과 같은 방법으로 진행 하시면 됩니다. 
 
 
 
